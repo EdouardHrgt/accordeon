@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap");
+
+:root {
+  /* Text */
+  --dark-grayish-blue: hsl(240, 6%, 50%);
+  --soft-red: hsl(14, 88%, 65%);
+  --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --very-dark-grayish-blue: hsl(237, 12%, 33%);
+
+  /* Gradient */
+  --soft-blue: hsl(240, 73%, 65%);
+  --soft-violet: hsl(273, 75%, 66%);
+
+  /* Dividers */
+  --light-grayish-blue: hsl(240, 5%, 91%);
+
+  /* Fonts */
+  --body: 14px;
+  --Kumbh: "Kumbh Sans", sans-serif;
+
+  /* Widths */
+  --desktop: 100%;
+  --mobile: 375px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/** Full Page */
+main {
+  background: rgb(179, 112, 255);
+  background: linear-gradient(
+    180deg,
+    var(--soft-violet) 20%,
+    var(--soft-blue) 100%
+  );
+  height: 100vh;
+  margin: 0 auto;
+  width: var(--desktop);
+}
+
+/** Card container */
+.card {
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: rgb(44, 44, 44) 0px 25px 50px; /*! A remplacer par meilleur ombre*/
+  height: 520px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 923px;
+  display: flex;
+}
+
+/** Card Columns */
+.card .columns {
+  height: 100%;
+  width: 50%;
+}
+
+/** Left Column */
+.card .left-column {
+  background: url(./images/bg-pattern-desktop.svg);
+  background-position: -565px -300px;
+  background-repeat: no-repeat;
+  border-radius: 30px 0 0 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-container .main-img {
+  left: -77px;
+  position: absolute;
+  top: 65px;
+}
+
+.card .mobile-img {
+  display: none;
+}
+
+.card .box-img {
+  left: -93px;
+  position: absolute;
+  top: 200px;
+  z-index: 5;
+}
+
+.card .right-column {
+  background-color: white;
+  border-radius: 0 30px 30px 0;
+}
+
+.right-column h1 {
+  font-family: var(--Kumbh);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 60px;
+  padding-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.right-column ul {
+  height: auto;
+  width: 360px;
+}
+
+ul li {
+  list-style: none;
+}
+
+.content-wrapper {
+  font-size: 1rem;
+}
+
+.content-wrapper .questions {
+  font-weight: 700;
+  padding-bottom: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.questions img {
+  position: absolute;
+  right: 15px;
+  top: 18px;
+  transition: 0.4s;
+}
+
+.questions p {
+  padding: 12px 0 6px;
+}
+
+.questions hr {
+  display: inline-block;
+  width: 100%;
+}
+
+.content-wrapper .answers {
+  color: rgb(68, 68, 68);
+  display: none;
+  font-size: var(--body);
+  font-weight: 300;
+  line-height: 130%;
+  padding-bottom: 10px;
+  width: 320px;
+}
+
+/**----- Hover States -----*/
+.content-wrapper .questions:hover {
+  color: var(--soft-red);
+}
+
+/**----- Active States  -----*/
+
+.active-icons {
+  transform: rotate(180deg);
+}
+
+.active {
+  display: block !important;
+}
